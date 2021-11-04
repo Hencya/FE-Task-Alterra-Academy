@@ -1,0 +1,9 @@
+.title {
+  font-size: 100px;
+  background: #e3d510;
+  background: -webkit-linear-gradient(to right, #e3d510 0%, #0cafcf 100%);
+  background: -moz-linear-gradient(to right, #e3d510 0%, #0cafcf 100%);
+  background: linear-gradient(to right, #e3d510 0%, #0cafcf 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
