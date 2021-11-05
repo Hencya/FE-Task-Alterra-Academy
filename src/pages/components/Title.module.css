@@ -1,0 +1,16 @@
+.title {
+  font-size: 100px;
+  background-image: linear-gradient(
+    to left,
+    violet,
+    indigo,
+    blue,
+    green,
+    yellow,
+    orange,
+    red
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.44);
+}
