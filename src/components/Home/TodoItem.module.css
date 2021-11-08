@@ -1,0 +1,32 @@
+.row {
+  border-bottom: 2px solid lightgrey;
+}
+
+.title {
+  width: 20px;
+}
+
+.completed {
+  color: gray;
+  font-style: italic;
+  text-decoration: line-through;
+}
+
+.content {
+  height: 50px;
+  width: 50px;
+  text-align: end;
+}
+
+.button {
+  background-color: lightgrey;
+  border-radius: 50px;
+  font-weight: bold;
+  color: red;
+  border: solid white;
+  padding: 10px 10px;
+}
+
+.button:hover {
+  color: black;
+}
