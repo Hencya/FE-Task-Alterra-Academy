@@ -1,0 +1,43 @@
+button,
+input[type="submit"] {
+  width: 120px;
+  height: 30px;
+  font-size: 14px;
+  border-radius: 5px;
+  font-weight: bold;
+  border-style: solid;
+  margin: 10px 10px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.buttonSubmit,
+input[type="submit"] {
+  color: white;
+  background: green;
+  border-color: green;
+}
+
+.buttonSubmit:hover,
+input[type="submit"]:hover {
+  color: green;
+  background: transparent;
+}
+
+.buttonReset {
+  background: red;
+  color: white;
+  border-color: red;
+}
+
+.buttonReset:hover {
+  background: transparent;
+  color: red;
+}
+
+.errorMessage {
+  color: red;
+}
