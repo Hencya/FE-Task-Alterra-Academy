@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,100;1,300&display=swap");
+
+html,
+body,
+#root > div {
+  margin: 0;
+  height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+nav {
+  font-size: 1.2em;
+  background-color: white;
+}
+
+.nav-link {
+  color: #19345e !important;
+}
+
+.active {
+  color: #f47522 !important;
+  font-weight: 700;
+}
+
+.nav-link:hover {
+  color: #f47522 !important;
+}
+
+.navbar-nav .nav-link {
+  font-weight: bold;
+}

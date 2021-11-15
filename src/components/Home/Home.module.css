@@ -1,0 +1,57 @@
+.text1 {
+  font-size: 2em !important;
+  color: #19345e;
+}
+
+.text2 {
+  font-size: 5em !important;
+  color: #19345e;
+}
+
+.text3 {
+  font-size: 2.5em !important;
+  color: #19345e;
+}
+
+.content {
+  background-image: url("../../assets/img/bg-img.png");
+  background-size: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+@media (min-width: 100px) {
+  .content {
+    font-size: 0.1em;
+  }
+}
+
+@media (min-width: 200px) {
+  .content {
+    font-size: 0.3em;
+  }
+}
+
+@media (min-width: 400px) {
+  .content {
+    font-size: 0.4em;
+  }
+}
+
+@media (min-width: 556px) {
+  .content {
+    font-size: 0.6em;
+  }
+}
+
+@media (min-width: 992px) {
+  .content {
+    font-size: 1em;
+  }
+}
+
+@media (min-width: 1600px) {
+  .content {
+    font-size: 1.2em;
+  }
+}
