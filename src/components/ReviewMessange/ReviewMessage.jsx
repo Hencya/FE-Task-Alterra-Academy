@@ -1,12 +1,9 @@
 import { useNavigate } from "react-router";
+import { useSelector } from "react-redux";
 import styles from "./ReviewMessage.module.css";
 
 export default function ReviewMesage() {
-  const nama = JSON.parse(localStorage.getItem("nama"));
-  const phone = JSON.parse(localStorage.getItem("phone"));
-  const email = JSON.parse(localStorage.getItem("email"));
-  const message = JSON.parse(localStorage.getItem("message"));
-  const nationality = JSON.parse(localStorage.getItem("nationality"));
+  const form = useSelector((state) => state.form.forms);
   const navigate = useNavigate();
   return (
     <div
@@ -27,7 +24,7 @@ export default function ReviewMesage() {
         </div>
         <div className="col">
           <p className="mb-sm-0 mb-3 form-data" id="fullname">
-            {nama}
+            {form.nama}
           </p>
         </div>
       </div>
@@ -39,7 +36,7 @@ export default function ReviewMesage() {
         </div>
         <div className="col">
           <p className="mb-sm-0 mb-3 form-data" id="email">
-            {email}
+            {form.email}
           </p>
         </div>
       </div>
@@ -51,7 +48,7 @@ export default function ReviewMesage() {
         </div>
         <div className="col">
           <p className="mb-sm-0 mb-3 form-data" id="phone">
-            {phone}
+            {form.noHandphone}
           </p>
         </div>
       </div>
@@ -63,14 +60,14 @@ export default function ReviewMesage() {
         </div>
         <div className="col">
           <p className="mb-sm-0 mb-3 form-data" id="nationality">
-            {nationality}
+            {form.nationality}
           </p>
         </div>
       </div>
       <div className="row form-output my-4">
         <div className="col my-3">
           <p className="form-data fst-italic" id="message">
-            {message}
+            {form.message}
           </p>
         </div>
       </div>
