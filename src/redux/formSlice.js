@@ -9,9 +9,6 @@ export const sliceForm = createSlice({
     passData: (state, action) => {
       state.forms = action.payload;
     },
-    deleteData: (state) => {
-      state.forms = null;
-    },
   },
 });
 

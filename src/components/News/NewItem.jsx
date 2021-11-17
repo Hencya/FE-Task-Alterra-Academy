@@ -1,9 +1,24 @@
 export default function NewsItem(props) {
-  const { content, title } = props;
+  const { content, title, url, image } = props;
   return (
-    <div className="container card p-4 mb-3">
-      <h5 className="card-title">{title}</h5>
-      <p className="card-text">{content}</p>
+    <div className="col-md-4 mb-5">
+      <div className="card text-center shadow">
+        <div className="overflow">
+          <img src={image} alt="" className="card-img-top" />
+        </div>
+        <div className="card-body text-dark">
+          <h4 className="card-title">{title}</h4>
+          <p className="card-text text-secondary">{content}</p>
+          <a
+            href={url}
+            className="btn btn-outline-success"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Read More
+          </a>
+        </div>
+      </div>
     </div>
   );
 }

@@ -30,10 +30,21 @@ export default function NewsList() {
   }, []);
 
   return (
-    <div className="container w-50 py-5">
-      {news.map((item) => (
-        <NewsItem key={nextId()} title={item.title} content={item.snippet} />
-      ))}
+    <div
+      className="container-fluid d-flex justify-content-center position-absolute p-5"
+      style={{ top: "150px" }}
+    >
+      <div className="row">
+        {news.map((item) => (
+          <NewsItem
+            key={nextId()}
+            title={item.title}
+            content={item.snippet}
+            url={item.url}
+            image={item.image_url}
+          />
+        ))}
+      </div>
       {news.length === 0 && <h5>{err}</h5>}
     </div>
   );
