@@ -1,89 +1,75 @@
-import { useState } from "react";
-import "./Home.css";
+import { useState } from "react"
+import "./Home.css"
 
 function PassengerInput(props) {
   const [state, setState] = useState({
     nama: "",
     umur: "",
-    Jenis_Kelamin: "Pria",
+    jenisKelamin: "Pria",
     editing: true,
-  });
+  })
 
   const onChange = (e) => {
     setState({
       ...state,
       [e.target.name]: e.target.value,
-    });
-  };
+    })
+  }
 
   const handleSubmit = (e) => {
-    if (state.nama.trim() && state.umur && state.Jenis_Kelamin) {
-      const umur = state.umur;
+    if (state.nama.trim() && state.umur && state.jenisKelamin) {
+      const umur = state.umur
       if (umur >= 75 || umur <= 12) {
-        alert("Umur tidak sesuai");
+        alert("Umur tidak sesuai")
       } else {
         const newData = {
           nama: state.nama,
           umur: state.umur,
-          Jenis_Kelamin: state.Jenis_Kelamin,
-        };
-        props.tambahPengunjung(newData);
+          jenisKelamin: state.jenisKelamin,
+        }
+        props.tambahPengunjung(newData)
         setState({
           ...state,
           nama: "",
           umur: "",
-          Jenis_Kelamin: "Pria",
-        });
+          jenisKelamin: "Pria",
+        })
       }
     } else {
-      alert("Data masih ada yang kosong");
+      alert("Data masih ada yang kosong")
     }
-  };
+  }
 
   const handleBukaInput = () => {
     setState({
       ...state,
       editing: false,
-    });
-  };
+    })
+  }
 
   const handleTutupInput = () => {
     setState({
       ...state,
       editing: true,
-    });
-  };
+    })
+  }
 
-  let viewMode = {};
-  let editMode = {};
+  let viewMode = {}
+  let editMode = {}
 
   if (state.editing) {
-    viewMode.display = "none";
+    viewMode.display = "none"
   } else {
-    editMode.display = "none";
+    editMode.display = "none"
   }
 
   return (
     <div>
       <div onSubmit={handleSubmit} style={viewMode}>
         <p>Masukkan Nama Anda</p>
-        <input
-          type="text"
-          className="input-text"
-          placeholder="Nama anda ..."
-          value={state.nama}
-          name="nama"
-          onChange={onChange}
-        />
+        <input type="text" className="input-text" placeholder="Nama anda ..." value={state.nama} name="nama" onChange={onChange} />
         <p>Masukkan Umur Anda</p>
-        <input
-          type="number"
-          className="input-text"
-          placeholder="Umur anda ..."
-          value={state.umur}
-          name="umur"
-          onChange={onChange}
-        />
+        <input type="number" className="input-text" placeholder="Umur anda ..." value={state.umur} name="umur" onChange={onChange} />
         <p>Masukkan Jenis Kelamin Anda</p>
         <select onChange={onChange} name="jenisKelamin">
           <option value="Pria" selected>
@@ -101,7 +87,7 @@ function PassengerInput(props) {
         Masukkan Nama Pelanggan
       </button>
     </div>
-  );
+  )
 }
 
-export default PassengerInput;
+export default PassengerInput
