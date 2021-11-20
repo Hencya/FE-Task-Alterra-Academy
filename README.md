@@ -1,1 +1,1 @@
-# FE-Task-Alterra-Academy
+# alta-react-tasks
