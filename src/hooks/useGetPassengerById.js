@@ -3,10 +3,10 @@ import { GetPassengerByID } from "../graphql/query";
 
 export default function useGetPassengerByID(state) {
   const [
-    getPassenger,
+    getPassengerByid,
     { data: dataById, loading: loadingSearch, error: errorSearch },
   ] = useLazyQuery(GetPassengerByID, {
     fetchPolicy: "network-only",
   });
-  return { dataById, getPassenger, loadingSearch, errorSearch };
+  return { dataById, getPassengerByid, loadingSearch, errorSearch };
 }
